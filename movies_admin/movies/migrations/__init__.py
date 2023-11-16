@@ -1,0 +1,1 @@
+"""Movies application migration package."""

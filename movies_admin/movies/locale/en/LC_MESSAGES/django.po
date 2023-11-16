@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-10 20:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: movies/admin.py:16
+msgid "filmwork genre"
+msgstr ""
+
+#: movies/admin.py:17
+msgid "filmwork genres"
+msgstr ""
+
+#: movies/admin.py:24
+msgid "filmwork person"
+msgstr ""
+
+#: movies/admin.py:25
+msgid "filmwork persons"
+msgstr ""
+
+#: movies/apps.py:12
+msgid "Movies"
+msgstr ""
+
+#: movies/models/abstract_models.py:23 movies/models/through_models.py:22
+msgid "created"
+msgstr ""
+
+#: movies/models/abstract_models.py:24
+msgid "modified"
+msgstr ""
+
+#: movies/models/filmwork.py:35
+msgid "title"
+msgstr ""
+
+#: movies/models/filmwork.py:36 movies/models/genre.py:24
+msgid "description"
+msgstr ""
+
+#: movies/models/filmwork.py:37
+msgid "creation date"
+msgstr ""
+
+#: movies/models/filmwork.py:39
+msgid "rating"
+msgstr ""
+
+#: movies/models/filmwork.py:46
+msgid "type"
+msgstr ""
+
+#: movies/models/filmwork.py:49
+msgid "file"
+msgstr ""
+
+#: movies/models/filmwork.py:55
+msgid "certificate"
+msgstr ""
+
+#: movies/models/filmwork.py:65
+msgid "Filmwork"
+msgstr ""
+
+#: movies/models/filmwork.py:66
+msgid "Filmworks"
+msgstr ""
+
+#: movies/models/genre.py:23
+msgid "name"
+msgstr ""
+
+#: movies/models/genre.py:30
+msgid "Genre"
+msgstr ""
+
+#: movies/models/genre.py:31
+msgid "Genres"
+msgstr ""
+
+#: movies/models/person.py:22
+msgid "full_name"
+msgstr ""
+
+#: movies/models/person.py:28
+msgid "Person"
+msgstr ""
+
+#: movies/models/person.py:29
+msgid "Persons"
+msgstr ""
+
+#: movies/models/through_models.py:15 movies/models/through_models.py:50
+msgid "film_work"
+msgstr ""
+
+#: movies/models/through_models.py:20
+msgid "genre"
+msgstr ""
+
+#: movies/models/through_models.py:55
+msgid "person"
+msgstr ""
+
+#: movies/models/through_models.py:57
+msgid "role"
+msgstr ""
