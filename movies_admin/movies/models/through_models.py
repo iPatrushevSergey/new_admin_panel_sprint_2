@@ -27,7 +27,7 @@ class GenreFilmwork(UUIDMixin):
         db_table = 'content\".\"genre_film_work'
         constraints = (
             models.UniqueConstraint(
-                fields=('filmwork', 'genre'),
+                fields=('film_work', 'genre'),
                 name='unique_film_work_genre',
             ),
         )
@@ -69,7 +69,7 @@ class PersonFilmwork(UUIDMixin):
         db_table = 'content\".\"person_film_work'
         constraints = (
             models.UniqueConstraint(
-                fields=('filmwork', 'person', 'role'),
+                fields=('film_work', 'person', 'role'),
                 name='unique_film_work_person_role',
             ),
         )

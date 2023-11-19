@@ -51,11 +51,6 @@ class Filmwork(UUIDMixin, TimeStampedMixin):
         null=True,
         upload_to='movies/',
     )
-    certificate = models.CharField(
-        _('certificate'),
-        max_length=STR_LENGTH255,
-        blank=True,
-    )
     persons = models.ManyToManyField(Person, through='PersonFilmwork')
 
     class Meta(object):
