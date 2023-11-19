@@ -16,4 +16,5 @@ include(
     'components/password_validation.py',
     'components/internationalization.py',
     'components/static.py',
+    'components/media.py',
 )
