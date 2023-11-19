@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "New admin panel"
+version = "0.1.0"
+description = "The first sprint of the middle python developer course"
+authors = ["Sergey Patrushev <PatrushevSergeyVal@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.0"
+django-split-settings = "^1.2.0"
+django = "^4.2.6"
+pydantic-settings = "^2.0.3"
+uwsgi = "^2.0.23"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+flake8 = "^6.1.0"
+wemake-python-styleguide = "^0.18.0"
+isort = "^5.12.0"
+faker = "^19.10.0"
+autopep8 = "^2.0.4"
+pytest = "^7.4.3"
+
+[tool.autopep8]
+max_line_length = 89
+in-place = true
+recursive = true
+aggressive = 3
+
+[tool.isort]
+profile = "hug"
+src_paths = ["isort", "test"]
+multi_line_output = 3
+line_length = 89
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
