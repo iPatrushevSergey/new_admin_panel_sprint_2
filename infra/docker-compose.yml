@@ -1,1 +1,49 @@
 version: '3'
+services:
+
+  admin_postgres:
+    image: postgres:13.0-alpine
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+
+  admin_django:
+    build:
+      context: ../movies_admin
+      args:
+        POETRY_VERSION: ${POETRY_VERSION}
+    ports:
+      - "8000:8000"
+    environment:
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_SCHEMAS: ${DB_SCHEMAS}
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
+      DEBUG: ${DEBUG}
+      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD}
+      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL}
+      DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME}
+    expose:
+      - "8000"
+    restart: always
+    depends_on:
+      - admin_postgres
+    volumes:
+      - static_volume:/opt/app/static/
+      - media_volume:/opt/app/media/
+
+volumes:
+  static_volume:
+  media_volume:
+  postgres_data:
