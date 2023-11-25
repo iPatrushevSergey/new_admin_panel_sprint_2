@@ -156,6 +156,21 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-debug-toolbar"
+version = "4.2.0"
+description = "A configurable set of panels that display various debug information about the current request/response."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django_debug_toolbar-4.2.0-py3-none-any.whl", hash = "sha256:af99128c06e8e794479e65ab62cc6c7d1e74e1c19beb44dcbf9bad7a9c017327"},
+    {file = "django_debug_toolbar-4.2.0.tar.gz", hash = "sha256:bc7fdaafafcdedefcc67a4a5ad9dac96efd6e41db15bc74d402a54a2ba4854dc"},
+]
+
+[package.dependencies]
+django = ">=3.2.4"
+sqlparse = ">=0.2"
+
+[[package]]
 name = "django-split-settings"
 version = "1.2.0"
 description = "Organize Django settings into multiple files and directories. Easily override and modify settings. Use wildcards and optional settings files."
@@ -1224,4 +1239,4 @@ typing_extensions = ">=4.0,<5.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "c7a01ba5d1e75050d8930e809a0aac40daed4fed0812d06e01b49c837183f58c"
+content-hash = "68a1a11581ad727ca8d5a95cad49571d6e34a8f066e9d58f7c55ddd5fb2a5703"

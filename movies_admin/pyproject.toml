@@ -26,6 +26,7 @@ isort = "^5.12.0"
 faker = "^19.10.0"
 autopep8 = "^2.0.4"
 pytest = "^7.4.3"
+django-debug-toolbar = "^4.2.0"
 
 [tool.autopep8]
 max_line_length = 89
