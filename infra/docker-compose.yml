@@ -16,7 +16,8 @@ services:
 
   admin_postgres:
     container_name: admin_postgres
-    image: postgres:13.0-alpine
+    build:
+      context: ./postgres
     ports:
       - "5432:5432"
     expose:
@@ -27,7 +28,6 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
       - postgres_data:/var/lib/postgresql/data:rw
     networks:
       - admin_panel
