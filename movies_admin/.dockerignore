@@ -1,3 +1,5 @@
 .dockerignore
 Dockerfile
-uwsgi
+*.md
+.git
+.idea
