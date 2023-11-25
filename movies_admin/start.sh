@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-python manage.py collectstatic --noinput \
-&& python manage.py migrate movies initial0001 --fake \
-&& python manage.py migrate
+python manage.py collectstatic --noinput
+python manage.py migrate movies initial0001 --fake
+python manage.py migrate
+python manage.py compilemessages -l en -l ru
 
 if [ "$DJANGO_SUPERUSER_USERNAME" ]
 then
