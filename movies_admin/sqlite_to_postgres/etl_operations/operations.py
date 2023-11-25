@@ -71,7 +71,7 @@ class ETLOperation(object):
                 except Exception as prepare_exc:
                     logging.error(
                         msg='An error occurred while preparing ' +
-                            'the {0}'.format(load_table) +
+                            'the {0} '.format(load_table) +
                             'table. Error: {0}'.format(prepare_exc),
                     )
 

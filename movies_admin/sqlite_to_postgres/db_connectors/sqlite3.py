@@ -52,7 +52,7 @@ class SQLiteExtractor(BaseDatabaseConnector):
         except Exception as exc:
             logging.error(
                 msg='An error occurred while extracting data ' +
-                    'from {0}'.format(table) +
+                    'from {0} '.format(table) +
                     'the table. Error: {0}'.format(exc),
             )
 

@@ -42,10 +42,7 @@ class Person(UUIDMixin, TimeStampedMixin):
         Returns:
             (str): All fields of the object.
         """
-        return '{0}({1}, {2}, {3}, {4})'.format(
-            self.__class__.__name__,
-            self.id,
-            self.full_name,
-            self.created,
-            self.modified,
+        return (
+            f'{self.__class__.__name__}({self.id}, {self.full_name}, ' +
+            f'{self.created}, {self.modified})'
         )

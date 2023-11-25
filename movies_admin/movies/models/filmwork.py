@@ -74,14 +74,8 @@ class Filmwork(UUIDMixin, TimeStampedMixin):
         Returns:
             (str): All fields of the object.
         """
-        return '{0}({1}, {2}, {3:20.20}, {4}, {5}, {6}, {7}, {8})'.format(
-            self.__class__.__name__,
-            self.id,
-            self.title,
-            self.description,
-            self.creation_date,
-            self.rating,
-            self.type,
-            self.created,
-            self.modified,
+        return (
+            f'{self.__class__.__name__}({self.id}, {self.title}, ' +
+            f'{self.description}, {self.creation_date}, {self.rating}, ' +
+            f'{self.type}, {self.created}, {self.modified})'
         )

@@ -38,12 +38,9 @@ class GenreFilmwork(UUIDMixin):
         Returns:
             (str): All fields of the object.
         """
-        return '{0}({1}, {2}, {3}, {4})'.format(
-            self.__class__.__name__,
-            self.id,
-            self.film_work,
-            self.genre,
-            self.created,
+        return (
+            f'{self.__class__.__name__}({self.id}, {self.film_work}, ' +
+            f'{self.genre}, {self.created})'
         )
 
 
@@ -80,11 +77,7 @@ class PersonFilmwork(UUIDMixin):
         Returns:
             (str): All fields of the object.
         """
-        return '{0}({1}, {2}, {3}, {4}, {5})'.format(
-            self.__class__.__name__,
-            self.id,
-            self.film_work,
-            self.person,
-            self.role,
-            self.created,
+        return (
+            f'{self.__class__.__name__}({self.id}, {self.film_work}, ' +
+            f'{self.person}, {self.role}, {self.created})'
         )
