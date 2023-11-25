@@ -96,7 +96,7 @@ class ETLOperation(object):
                     except Exception as load_exc:
                         logging.error(
                             msg='An error occurred when loading data ' +
-                                'into the {0}'.format(load_table) +
+                                'into the {0} '.format(load_table) +
                                 'table. Error: {0}'.format(load_exc),
                         )
             pg_connect.commit()
