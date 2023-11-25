@@ -6,6 +6,10 @@ ARG POETRY_VERSION
 WORKDIR /opt/app
 
 RUN apt update -y && apt install -y gcc
+RUN apt install -y gettext
+
+RUN mkdir /opt/app/static && mkdir /opt/app/media
+RUN groupadd -r admin_panel && useradd -d /opt/app -r -g admin_panel web && chown web:admin_panel -R /opt/app
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -30,5 +34,7 @@ COPY . .
 RUN chmod u+x start.sh
 
 EXPOSE 8000
+
+USER web
 
 CMD ["./start.sh"]
