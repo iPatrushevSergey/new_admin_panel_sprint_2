@@ -397,7 +397,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/v1/movies/0000",
+					"raw": "127.0.0.1:8000/api/v1/movies/00af52ec-9345-4d66-adbe-50eb917f413a",
 					"host": [
 						"127",
 						"0",
