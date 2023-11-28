@@ -9,6 +9,7 @@ from django.views.generic.detail import BaseDetailView
 from django.views.generic.list import BaseListView
 
 from movies.models.filmwork import Filmwork
+from movies.models.through_models import RoleType
 
 
 class MoviesApiMixin(object):
@@ -28,17 +29,17 @@ class MoviesApiMixin(object):
             actors=ArrayAgg(
                 'persons__full_name',
                 distinct=True,
-                filter=models.Q(personfilmwork__role='actor'),
+                filter=models.Q(personfilmwork__role=RoleType.actor),
             ),
             directors=ArrayAgg(
                 'persons__full_name',
                 distinct=True,
-                filter=models.Q(personfilmwork__role='director'),
+                filter=models.Q(personfilmwork__role=RoleType.director),
             ),
             writers=ArrayAgg(
                 'persons__full_name',
                 distinct=True,
-                filter=models.Q(personfilmwork__role='writer'),
+                filter=models.Q(personfilmwork__role=RoleType.writer),
             ),
         ).values(
             'id', 'title', 'description', 'creation_date',

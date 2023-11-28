@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 python manage.py collectstatic --noinput
+
+while ! nc -z $DB_HOST $DB_PORT; do
+      sleep 0.1
+done 
+
 python manage.py migrate movies initial0001 --fake
 python manage.py migrate
 python manage.py compilemessages -l en -l ru

@@ -7,6 +7,7 @@ WORKDIR /opt/app
 
 RUN apt update -y && apt install -y gcc
 RUN apt install -y gettext
+RUN apt install -y netcat-traditional
 
 RUN mkdir /opt/app/static && mkdir /opt/app/media
 RUN groupadd -r admin_panel && useradd -d /opt/app -r -g admin_panel web && chown web:admin_panel -R /opt/app

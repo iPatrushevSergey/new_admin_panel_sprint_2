@@ -6,6 +6,14 @@ from django.utils.translation import gettext_lazy as _
 from movies.models.abstract_models import UUIDMixin
 
 
+class RoleType(models.TextChoices):
+    """Choosing the role of a person."""
+
+    director = 'director'
+    writer = 'writer'
+    actor = 'actor'
+
+
 class GenreFilmwork(UUIDMixin):
     """Bind models `Genre` and `Filmwork`."""
 
@@ -57,7 +65,7 @@ class PersonFilmwork(UUIDMixin):
         on_delete=models.CASCADE,
         verbose_name=_('person'),
     )
-    role = models.TextField(_('role'), null=True)
+    role = models.CharField(_('role'), choices=RoleType.choices)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta(object):
